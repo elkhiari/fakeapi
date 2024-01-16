@@ -1,11 +1,11 @@
 const express = require('express');
 const dbjson = require('./db.json');
 const cors = require('cors');
-app.use(cors());
-app.use(express.json());
 
 
 const app = express();
+app.use(cors());
+app.use(express.json());
 
 app.get('/product', (req, res) => {
     res.json(dbjson);
